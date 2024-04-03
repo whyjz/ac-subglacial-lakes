@@ -232,7 +232,11 @@ def filter_is2_atl6_data(altimetry_subsets_folder: str,
 
     # gdf_rgi = gdf_rgi.to_crs(epsg=working_epsg)
     gdf_rgi = read_zipped_shapefile(rgi_index_file, working_epsg)
-    gdf_rgi_summary_polygon = gdf_rgi.geometry.unary_union
+    try:
+        gdf_rgi_summary_polygon = gdf_rgi.geometry.unary_union
+    except:    # GEOSException: TopologyException for RGI 7 file
+        valid_geom_idx = np.where(gdf_rgi.geometry.is_valid)
+        gdf_rgi_summary_polygon = gdf_rgi.iloc[valid_geom_idx].geometry.unary_union
 
 
     icesat2_searching_area = poly_refgeo.difference(gdf_rgi_summary_polygon.buffer(off_ice_buffer))
