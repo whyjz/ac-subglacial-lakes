@@ -16,9 +16,11 @@ from dask.diagnostics import ProgressBar
 
 import numpy as np
 from scipy.stats import median_abs_deviation
+from sklearn.gaussian_process.kernels import ConstantKernel
+from sklearn.gaussian_process.kernels import RationalQuadratic
 
 from achydro.atl06lib import read_atl06, read_h5
-from carst.libdhdt import DemPile, sigmoid_reg
+from carst.libdhdt import DemPile, sigmoid_reg, gp_reg, wl_reg
 from carst.libraster import SingleRaster
 
 def clip_extent(gdf, poly):
@@ -58,7 +60,36 @@ def std_outlierremoved(a : np.array):
     answer = np.std(filtered)
     return answer
 
-def sigmoid_get_event_dh_timing(a, eps=20, min_samples=3, k_bounds=None, x0_bounds=None):
+
+def wlr_get_event_slope(a, eps=20, min_samples=3, min_datapoints=4, min_time_span=365):
+    """
+    For linear fitting.
+    a: carst.PixelTimeSeries object
+    """
+    xx = a.get_date()
+    yy = a.get_value()
+    ye = a.get_uncertainty()
+    # ====
+    # good_idx = a.bitmask_labels == 0
+    exitstate, evmd_labels = a.do_evmd(eps=eps, min_samples=min_samples)
+    good_idx = np.logical_and(a.bitmask_labels == 0, evmd_labels >= 0)
+    # ====
+    if not np.any(good_idx):
+        slope = np.nan
+        duration = np.nan
+        return slope, duration
+    
+    xx_good = xx[good_idx]
+    yy_good = yy[good_idx]
+    ye_good = ye[good_idx]
+
+    x_pred, y_pred, slope, slope_stderr, duration, exitstate = wl_reg(
+        xx_good, yy_good, ye=ye_good, min_datapoints=min_datapoints, min_time_span=min_time_span)
+    
+    return slope, duration
+
+
+def sigmoid_get_event_dh_timing(a, eps=20, min_samples=3, k_bounds=None, x0_bounds=None, downward_first=True):
     """
     For sigmoid fitting.
     a: carst.PixelTimeSeries object
@@ -81,9 +112,44 @@ def sigmoid_get_event_dh_timing(a, eps=20, min_samples=3, k_bounds=None, x0_boun
     ye_good = ye[good_idx]
     
     x_pred, y_pred, sigmoid_height, sigmoid_height_stderr, sigmoid_timing, exitstate = sigmoid_reg(
-        xx_good, yy_good, ye=ye_good, k_bounds=k_bounds, x0_bounds=x0_bounds)
+        xx_good, yy_good, ye=ye_good, k_bounds=k_bounds, x0_bounds=x0_bounds, downward_first=downward_first)
 
     return sigmoid_height, sigmoid_timing
+
+
+def gp_get_event_dh_timing(a, eps=20, min_samples=3, gp_kernel=None):
+    """
+    For Gaussian Process fitting.
+    a: carst.PixelTimeSeries object
+    """
+    xx = a.get_date()
+    yy = a.get_value()
+    ye = a.get_uncertainty()
+    # ====
+    # good_idx = a.bitmask_labels == 0
+    exitstate, evmd_labels = a.do_evmd(eps=eps, min_samples=min_samples)
+    good_idx = np.logical_and(a.bitmask_labels == 0, evmd_labels >= 0)
+    # ====
+    if not np.any(good_idx) or np.sum(good_idx) <= 3:
+        max_transient_dh = np.nan
+        max_transient_timing = np.nan
+        return max_transient_dh, max_transient_timing
+    
+    xx_good = xx[good_idx]
+    yy_good = yy[good_idx]
+    ye_good = ye[good_idx]
+
+    if gp_kernel is None:
+        gp_kernel = ConstantKernel(constant_value=160, constant_value_bounds='fixed') * RationalQuadratic(
+                                   length_scale=1.2, alpha=0.1, alpha_bounds='fixed', length_scale_bounds='fixed')
+
+    x_pred_pos, y_prediction, max_transient_dh, max_transient_dh_stderr, max_transient_timing, exitstate = gp_reg(
+        xx_good, yy_good, ye=ye_good, kernel=gp_kernel)
+
+    
+    return max_transient_dh, max_transient_timing
+
+
 
 def read_zipped_shapefile(zipped_shapefile, working_epsg):
     zipshp = io.BytesIO(open(zipped_shapefile, 'rb').read())
@@ -304,7 +370,10 @@ def make_dem_manifest(dem_summary_file: str,
                 dx, dy, dz = vector_translation
                 # print(vector_translation)
                 begerrorfile = f"{prefix}-beg_errors.csv"
+                # print(begerrorfile)
                 begerror_matrix = np.loadtxt(begerrorfile, delimiter=',')
+                if begerror_matrix.shape[0] <= 4:    # Skip DEMs with ICESat measurements <= 4
+                    continue
                 begerror_values = begerror_matrix[:, -1]
                 beg_deviation = mean_smallest75percent(begerror_values)
                 # print(beg_deviation)
@@ -385,7 +454,8 @@ def dhdt_fit_sigmoid(pile: "DemPile object",
                      chunksize: "2-tuple"=(100, 100),
                      evmd_threshold: int=20,
                      min_samples: int=3,
-                     k_bounds: "2-tuple"=[10, 150]):
+                     k_bounds: "2-tuple"=[10, 150],
+                     downward_first: bool=True):
     """
     AC-hydro Step 9. Fit elevation change with a sigmoid model. 
     
@@ -406,7 +476,7 @@ def dhdt_fit_sigmoid(pile: "DemPile object",
         for x in seq:
             # sigmoid_height, sigmoid_timing = sigmoid_get_event_dh_timing(
             #     x, eps=evmd_threshold, min_samples=min_samples, k_bounds=k_bounds, x0_bounds=x0_bounds)
-            sigmoid_height, sigmoid_timing = sigmoid_get_event_dh_timing(x, eps=evmd_threshold, min_samples=min_samples, k_bounds=k_bounds)
+            sigmoid_height, sigmoid_timing = sigmoid_get_event_dh_timing(x, eps=evmd_threshold, min_samples=min_samples, k_bounds=k_bounds, downward_first=downward_first)
             sub_results.append((sigmoid_height, sigmoid_timing))
         return sub_results
     
@@ -456,3 +526,105 @@ def dhdt_fit_sigmoid(pile: "DemPile object",
 
 
 
+def dhdt_fit_wl(pile: "DemPile object",
+                tag: str,
+                final_output_tag: str,
+                nproc: int=32,
+                chunksize: "2-tuple"=(100, 100),
+                evmd_threshold: int=20,
+                min_samples: int=3,
+                min_datapoints: int=4, 
+                min_time_span: float=365):
+    """
+    AC-hydro Step 9 (alternative). Fit elevation change with a weighted linear model.
+    
+    nproc: number of processors
+    """
+    dhdt_prefix = f'{tag}_15m'
+    
+    client = DaskClient(n_workers=nproc)
+    
+    drain_slope_map    = np.full_like(pile.ts, np.nan, dtype=float)
+    drain_duration_map = np.full_like(pile.ts, np.nan, dtype=float)
+    
+    def batch(seq, evmd_threshold, min_samples, min_datapoints, min_time_span):
+        sub_results = []
+        for x in seq:
+            slope, duration = wlr_get_event_slope(x, eps=evmd_threshold, min_samples=min_samples, min_datapoints=min_datapoints, min_time_span=min_time_span)
+            sub_results.append((slope, duration))
+        return sub_results
+    
+    msize = chunksize[0]
+    nsize = chunksize[1]
+    m_nodes = np.arange(0, pile.ts.shape[0], msize)
+    n_nodes = np.arange(0, pile.ts.shape[1], nsize)
+    super_results = []
+    
+    for super_m in range(m_nodes.size):
+        pile.display_progress(m_nodes[super_m], pile.ts.shape[0])
+        batches = []
+        ts_slice = pile.ts[m_nodes[super_m]:m_nodes[super_m]+msize, :]
+        for m in range(ts_slice.shape[0]):
+            for n in range(n_nodes.size):
+                result_batch = dask.delayed(batch)(ts_slice[m, n_nodes[n]:n_nodes[n]+nsize ], evmd_threshold, min_samples, min_datapoints, min_time_span)
+                batches.append(result_batch)
+                
+        with ProgressBar():
+            results = dask.compute(batches)
+        super_results.append(results[0])
+    
+    for m in range(pile.ts.shape[0]):
+        for n in range(pile.ts.shape[1]):
+            idx1 = m // msize
+            idx2 = n_nodes.size * (m % msize) + n // nsize
+            idx3 = n % nsize
+            slope    = super_results[idx1][idx2][idx3][0]
+            duration = super_results[idx1][idx2][idx3][1]
+            drain_slope_map[m, n] = slope
+            drain_duration_map[m, n] = duration
+            
+    if client is not None:
+        client.close()
+        
+    drain_slope_map_raster = SingleRaster(f"{dhdt_prefix}_{final_output_tag}_slope.tif")
+    drain_duration_map_raster = SingleRaster(f"{dhdt_prefix}_{final_output_tag}_duration.tif")
+    
+    drain_slope_map_raster.Array2Raster(drain_slope_map, pile.refgeo)
+    drain_duration_map_raster.Array2Raster(drain_duration_map, pile.refgeo)
+    
+    return drain_slope_map, drain_duration_map
+
+
+
+
+def dhdt_fit_gp(pile: "DemPile object",
+                tag: str,
+                final_output_tag: str,
+                evmd_threshold: int=20,
+                min_samples: int=3,
+                gp_kernel: "Kernel instance"=ConstantKernel(constant_value=160, constant_value_bounds='fixed') * RationalQuadratic(
+                                       length_scale=1.2, alpha=0.1, alpha_bounds='fixed', length_scale_bounds='fixed')
+                ):
+    """
+    AC-hydro Step 9 (alternative). Fit elevation change with a sigmoid model. 
+    """
+
+    dhdt_prefix = f'{tag}_15m'
+    drain_dh_map = np.full_like(pile.ts, np.nan, dtype=float)
+    drain_t_map =  np.full_like(pile.ts, np.nan, dtype=float)
+
+    for m in range(pile.ts.shape[0]):
+        pile.display_progress(m, pile.ts.shape[0])
+        for n in range(pile.ts.shape[1]):
+            max_transient_dh, max_transient_timing = gp_get_event_dh_timing(pile.ts[m, n], eps=evmd_threshold, min_samples=min_samples, gp_kernel=gp_kernel)
+            drain_dh_map[m, n] = max_transient_dh
+            drain_t_map[m, n] = max_transient_timing
+
+    drain_dh_map_raster = SingleRaster(f"{dhdt_prefix}_{final_output_tag}_gp-dh.tif")
+    drain_t_map_raster = SingleRaster(f"{dhdt_prefix}_{final_output_tag}_gp-t.tif")
+    
+    drain_dh_map_raster.Array2Raster(drain_dh_map, pile.refgeo)
+    drain_t_map_raster.Array2Raster(drain_t_map, pile.refgeo)
+    
+    return drain_dh_map, drain_t_map
+    
