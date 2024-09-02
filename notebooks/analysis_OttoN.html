@@ -1,0 +1,2074 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Example workflow and result visualization: OttoN (lake nos. 4-a &amp; 4-b) &#8212; Active subglacial water in the Canadian Arctic - supporting material</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/analysis_OttoN';</script>
+    <link rel="canonical" href="https://whyjz.github.io/ac-subglacial-lakes/notebooks/analysis_OttoN.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supplemental data README" href="../sup-data.html" />
+    <link rel="prev" title="Figure 5 script" href="frequency_vs_massbalance.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Active subglacial water in the Canadian Arctic - supporting material - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Active subglacial water in the Canadian Arctic - supporting material - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplementary information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../supplement.html">Supplementary information for “Widespread and rapid dynamics of subglacial and proglacial-subglacial water in the Canadian Arctic”</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figure scripts</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="main_visual.html">Figure 2 script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temporal_patterns.html">Figure 4 script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frequency_vs_massbalance.html">Figure 5 script</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example workflow and result visualization: OttoN (lake nos. 4-a &amp; 4-b)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplementary data set</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../sup-data.html">Supplemental data README</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/whyjz/ac-subglacial-lakes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/whyjz/ac-subglacial-lakes/edit/main/jupyter-book/notebooks/analysis_OttoN.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/whyjz/ac-subglacial-lakes/issues/new?title=Issue%20on%20page%20%2Fnotebooks/analysis_OttoN.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/analysis_OttoN.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example workflow and result visualization: OttoN (lake nos. 4-a & 4-b)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-acquire-dem-list">Step 1: Acquire DEM list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-subset-dems">Step 2: Download Subset DEMs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-acquire-icesat-2-atl-6-points">Step 3: Acquire ICESat-2 ATL-6 points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-select-icesat-2-atl-6-points-over-good-bedrock">Step 4: Select ICESat-2 ATL-6 points over good bedrock</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-align-every-dems-with-icesat-2-reference-points-and-calcuate-uncertainty">Step 5: Align every DEMs with ICESat-2 reference points, and calcuate uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-analyze-the-processed-dems-and-make-manifest">Step 6: Analyze the processed DEMs and make manifest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-stack-all-dems">Step 7: Stack all DEMs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-visualization-of-the-stacked-elevations">Step 8: Visualization of the stacked elevations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-fit-a-dh-dt-model-determine-maximum-elevation-change-and-timing">Step 9: Fit a dh/dt model, determine maximum elevation change and timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-result-visualization">Step 10: Result visualization</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="example-workflow-and-result-visualization-otton-lake-nos-4-a-4-b">
+<h1>Example workflow and result visualization: OttoN (lake nos. 4-a &amp; 4-b)<a class="headerlink" href="#example-workflow-and-result-visualization-otton-lake-nos-4-a-4-b" title="Permalink to this heading">#</a></h1>
+<p>The last step produces the supplemental figure S4.</p>
+<section id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+<span class="c1"># %matplotlib inline</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/home/whyjz278/Github/ac-subglacial-lakes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">achydro</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">carst.libdhdt</span> <span class="kn">import</span> <span class="n">DemPile</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  var force = true;
+  var py_version = '3.3.4'.replace('rc', '-rc.').replace('.dev', '-dev.');
+  var reloading = false;
+  var Bokeh = root.Bokeh;
+
+  if (typeof (root._bokeh_timeout) === "undefined" || force) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks;
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, js_modules, js_exports, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+    if (js_modules == null) js_modules = [];
+    if (js_exports == null) js_exports = {};
+
+    root._bokeh_onload_callbacks.push(callback);
+
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls.length === 0 && js_modules.length === 0 && Object.keys(js_exports).length === 0) {
+      run_callbacks();
+      return null;
+    }
+    if (!reloading) {
+      console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    }
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+    window._bokeh_on_load = on_load
+
+    function on_error() {
+      console.error("failed to load " + url);
+    }
+
+    var skip = [];
+    if (window.requirejs) {
+      window.requirejs.config({'packages': {}, 'paths': {'jspanel': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/jspanel', 'jspanel-modal': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal', 'jspanel-tooltip': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip', 'jspanel-hint': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint', 'jspanel-layout': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout', 'jspanel-contextmenu': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu', 'jspanel-dock': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock', 'gridstack': 'https://cdn.jsdelivr.net/npm/gridstack@7.2.3/dist/gridstack-all', 'notyf': 'https://cdn.jsdelivr.net/npm/notyf@3/notyf.min'}, 'shim': {'jspanel': {'exports': 'jsPanel'}, 'gridstack': {'exports': 'GridStack'}}});
+      require(["jspanel"], function(jsPanel) {
+	window.jsPanel = jsPanel
+	on_load()
+      })
+      require(["jspanel-modal"], function() {
+	on_load()
+      })
+      require(["jspanel-tooltip"], function() {
+	on_load()
+      })
+      require(["jspanel-hint"], function() {
+	on_load()
+      })
+      require(["jspanel-layout"], function() {
+	on_load()
+      })
+      require(["jspanel-contextmenu"], function() {
+	on_load()
+      })
+      require(["jspanel-dock"], function() {
+	on_load()
+      })
+      require(["gridstack"], function(GridStack) {
+	window.GridStack = GridStack
+	on_load()
+      })
+      require(["notyf"], function() {
+	on_load()
+      })
+      root._bokeh_is_loading = css_urls.length + 9;
+    } else {
+      root._bokeh_is_loading = css_urls.length + js_urls.length + js_modules.length + Object.keys(js_exports).length;
+    }
+
+    var existing_stylesheets = []
+    var links = document.getElementsByTagName('link')
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i]
+      if (link.href != null) {
+	existing_stylesheets.push(link.href)
+      }
+    }
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
+      if (existing_stylesheets.indexOf(url) !== -1) {
+	on_load()
+	continue;
+      }
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }    if (((window['jsPanel'] !== undefined) && (!(window['jsPanel'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/jspanel.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['GridStack'] !== undefined) && (!(window['GridStack'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/gridstack/gridstack@7.2.3/dist/gridstack-all.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['Notyf'] !== undefined) && (!(window['Notyf'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/notificationarea/notyf@3/notyf.min.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    var existing_scripts = []
+    var scripts = document.getElementsByTagName('script')
+    for (var i = 0; i < scripts.length; i++) {
+      var script = scripts[i]
+      if (script.src != null) {
+	existing_scripts.push(script.src)
+      }
+    }
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (var i = 0; i < js_modules.length; i++) {
+      var url = js_modules[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (const name in js_exports) {
+      var url = js_exports[name];
+      if (skip.indexOf(url) >= 0 || root[name] != null) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onerror = on_error;
+      element.async = false;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      element.textContent = `
+      import ${name} from "${url}"
+      window.${name} = ${name}
+      window._bokeh_on_load()
+      `
+      document.head.appendChild(element);
+    }
+    if (!js_urls.length && !js_modules.length) {
+      on_load()
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.4.min.js", "https://cdn.holoviz.org/panel/1.3.8/dist/panel.min.js"];
+  var js_modules = [];
+  var js_exports = {};
+  var css_urls = [];
+  var inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {} // ensure no trailing comma for IE
+  ];
+
+  function run_inline_js() {
+    if ((root.Bokeh !== undefined) || (force === true)) {
+      for (var i = 0; i < inline_js.length; i++) {
+	try {
+          inline_js[i].call(root, root.Bokeh);
+	} catch(e) {
+	  if (!reloading) {
+	    throw e;
+	  }
+	}
+      }
+      // Cache old bokeh versions
+      if (Bokeh != undefined && !reloading) {
+	var NewBokeh = root.Bokeh;
+	if (Bokeh.versions === undefined) {
+	  Bokeh.versions = new Map();
+	}
+	if (NewBokeh.version !== Bokeh.version) {
+	  Bokeh.versions.set(NewBokeh.version, NewBokeh)
+	}
+	root.Bokeh = Bokeh;
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    }
+    root._bokeh_is_initializing = false
+  }
+
+  function load_or_wait() {
+    // Implement a backoff loop that tries to ensure we do not load multiple
+    // versions of Bokeh and its dependencies at the same time.
+    // In recent versions we use the root._bokeh_is_initializing flag
+    // to determine whether there is an ongoing attempt to initialize
+    // bokeh, however for backward compatibility we also try to ensure
+    // that we do not start loading a newer (Panel>=1.0 and Bokeh>3) version
+    // before older versions are fully initialized.
+    if (root._bokeh_is_initializing && Date.now() > root._bokeh_timeout) {
+      root._bokeh_is_initializing = false;
+      root._bokeh_onload_callbacks = undefined;
+      console.log("Bokeh: BokehJS was loaded multiple times but one version failed to initialize.");
+      load_or_wait();
+    } else if (root._bokeh_is_initializing || (typeof root._bokeh_is_initializing === "undefined" && root._bokeh_onload_callbacks !== undefined)) {
+      setTimeout(load_or_wait, 100);
+    } else {
+      root._bokeh_is_initializing = true
+      root._bokeh_onload_callbacks = []
+      var bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+      if (!reloading && !bokeh_loaded) {
+	root.Bokeh = undefined;
+      }
+      load_libs(css_urls, js_urls, js_modules, js_exports, function() {
+	console.debug("Bokeh: BokehJS plotting callback run at", now());
+	run_inline_js();
+      });
+    }
+  }
+  // Give older versions of the autoload script a head-start to ensure
+  // they initialize before we start loading newer version.
+  setTimeout(load_or_wait, 100)
+}(window));</script><script type="application/javascript">
+if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
+  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
+}
+
+
+    function JupyterCommManager() {
+    }
+
+    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
+      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        comm_manager.register_target(comm_id, function(comm) {
+          comm.on_msg(msg_handler);
+        });
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
+          comm.onMsg = msg_handler;
+        });
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
+          var messages = comm.messages[Symbol.asyncIterator]();
+          function processIteratorResult(result) {
+            var message = result.value;
+            console.log(message)
+            var content = {data: message.data, comm_id};
+            var buffers = []
+            for (var buffer of message.buffers || []) {
+              buffers.push(new DataView(buffer))
+            }
+            var metadata = message.metadata || {};
+            var msg = {content, buffers, metadata}
+            msg_handler(msg);
+            return messages.next().then(processIteratorResult);
+          }
+          return messages.next().then(processIteratorResult);
+        })
+      }
+    }
+
+    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
+      if (comm_id in window.PyViz.comms) {
+        return window.PyViz.comms[comm_id];
+      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
+        if (msg_handler) {
+          comm.on_msg(msg_handler);
+        }
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
+        comm.open();
+        if (msg_handler) {
+          comm.onMsg = msg_handler;
+        }
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        var comm_promise = google.colab.kernel.comms.open(comm_id)
+        comm_promise.then((comm) => {
+          window.PyViz.comms[comm_id] = comm;
+          if (msg_handler) {
+            var messages = comm.messages[Symbol.asyncIterator]();
+            function processIteratorResult(result) {
+              var message = result.value;
+              var content = {data: message.data};
+              var metadata = message.metadata || {comm_id};
+              var msg = {content, metadata}
+              msg_handler(msg);
+              return messages.next().then(processIteratorResult);
+            }
+            return messages.next().then(processIteratorResult);
+          }
+        }) 
+        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
+          return comm_promise.then((comm) => {
+            comm.send(data, metadata, buffers, disposeOnDone);
+          });
+        };
+        var comm = {
+          send: sendClosure
+        };
+      }
+      window.PyViz.comms[comm_id] = comm;
+      return comm;
+    }
+    window.PyViz.comm_manager = new JupyterCommManager();
+    
+
+
+var JS_MIME_TYPE = 'application/javascript';
+var HTML_MIME_TYPE = 'text/html';
+var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
+var CLASS_NAME = 'output';
+
+/**
+ * Render data to the DOM node
+ */
+function render(props, node) {
+  var div = document.createElement("div");
+  var script = document.createElement("script");
+  node.appendChild(div);
+  node.appendChild(script);
+}
+
+/**
+ * Handle when a new output is added
+ */
+function handle_add_output(event, handle) {
+  var output_area = handle.output_area;
+  var output = handle.output;
+  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+    return
+  }
+  var id = output.metadata[EXEC_MIME_TYPE]["id"];
+  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+  if (id !== undefined) {
+    var nchildren = toinsert.length;
+    var html_node = toinsert[nchildren-1].children[0];
+    html_node.innerHTML = output.data[HTML_MIME_TYPE];
+    var scripts = [];
+    var nodelist = html_node.querySelectorAll("script");
+    for (var i in nodelist) {
+      if (nodelist.hasOwnProperty(i)) {
+        scripts.push(nodelist[i])
+      }
+    }
+
+    scripts.forEach( function (oldScript) {
+      var newScript = document.createElement("script");
+      var attrs = [];
+      var nodemap = oldScript.attributes;
+      for (var j in nodemap) {
+        if (nodemap.hasOwnProperty(j)) {
+          attrs.push(nodemap[j])
+        }
+      }
+      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+    if (JS_MIME_TYPE in output.data) {
+      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
+    }
+    output_area._hv_plot_id = id;
+    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
+      window.PyViz.plot_index[id] = Bokeh.index[id];
+    } else {
+      window.PyViz.plot_index[id] = null;
+    }
+  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+    var bk_div = document.createElement("div");
+    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+    var script_attrs = bk_div.children[0].attributes;
+    for (var i = 0; i < script_attrs.length; i++) {
+      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
+    }
+    // store reference to server id on output_area
+    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+  }
+}
+
+/**
+ * Handle when an output is cleared or removed
+ */
+function handle_clear_output(event, handle) {
+  var id = handle.cell.output_area._hv_plot_id;
+  var server_id = handle.cell.output_area._bokeh_server_id;
+  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
+  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
+  if (server_id !== null) {
+    comm.send({event_type: 'server_delete', 'id': server_id});
+    return;
+  } else if (comm !== null) {
+    comm.send({event_type: 'delete', 'id': id});
+  }
+  delete PyViz.plot_index[id];
+  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
+    var doc = window.Bokeh.index[id].model.document
+    doc.clear();
+    const i = window.Bokeh.documents.indexOf(doc);
+    if (i > -1) {
+      window.Bokeh.documents.splice(i, 1);
+    }
+  }
+}
+
+/**
+ * Handle kernel restart event
+ */
+function handle_kernel_cleanup(event, handle) {
+  delete PyViz.comms["hv-extension-comm"];
+  window.PyViz.plot_index = {}
+}
+
+/**
+ * Handle update_display_data messages
+ */
+function handle_update_output(event, handle) {
+  handle_clear_output(event, {cell: {output_area: handle.output_area}})
+  handle_add_output(event, handle)
+}
+
+function register_renderer(events, OutputArea) {
+  function append_mime(data, metadata, element) {
+    // create a DOM node to render to
+    var toinsert = this.create_output_subarea(
+    metadata,
+    CLASS_NAME,
+    EXEC_MIME_TYPE
+    );
+    this.keyboard_manager.register_events(toinsert);
+    // Render to node
+    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+    render(props, toinsert[0]);
+    element.append(toinsert);
+    return toinsert
+  }
+
+  events.on('output_added.OutputArea', handle_add_output);
+  events.on('output_updated.OutputArea', handle_update_output);
+  events.on('clear_output.CodeCell', handle_clear_output);
+  events.on('delete.Cell', handle_clear_output);
+  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
+
+  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+    safe: true,
+    index: 0
+  });
+}
+
+if (window.Jupyter !== undefined) {
+  try {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  } catch(err) {
+  }
+}
+</script><div class="output text_html"><style>*[data-root-id],
+*[data-root-id] > * {
+  box-sizing: border-box;
+  font-family: var(--jp-ui-font-family);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--vscode-editor-foreground, var(--jp-ui-font-color1));
+}
+
+/* Override VSCode background color */
+.cell-output-ipywidget-background:has(
+    > .cell-output-ipywidget-background > .lm-Widget > *[data-root-id]
+  ),
+.cell-output-ipywidget-background:has(> .lm-Widget > *[data-root-id]) {
+  background-color: transparent !important;
+}
+</style></div><div class="output text_html"><div id='p1002'>
+  <div id="f31f3b64-3e03-42d3-b373-a55c9322c66d" data-root-id="p1002" style="display: contents;"></div>
+</div>
+<script type="application/javascript">(function(root) {
+  var docs_json = {"91d6d662-de78-4761-b358-ee94e7fa9576":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"p1002"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"p1003","attributes":{"plot_id":"p1002","comm_id":"65d5af381906457ea7290d6c6ce7d1d6","client_comm_id":"a51c433c0f814de1ab166d5120aeb4af"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"copy_to_clipboard1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"value","kind":"Any","default":null}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"91d6d662-de78-4761-b358-ee94e7fa9576","roots":{"p1002":"f31f3b64-3e03-42d3-b373-a55c9322c66d"},"root_ids":["p1002"]}];
+  var docs = Object.values(docs_json)
+  if (!docs) {
+    return
+  }
+  const py_version = docs[0].version.replace('rc', '-rc.').replace('.dev', '-dev.')
+  function embed_document(root) {
+    var Bokeh = get_bokeh(root)
+    Bokeh.embed.embed_items_notebook(docs_json, render_items);
+    for (const render_item of render_items) {
+      for (const root_id of render_item.root_ids) {
+	const id_el = document.getElementById(root_id)
+	if (id_el.children.length && (id_el.children[0].className === 'bk-root')) {
+	  const root_el = id_el.children[0]
+	  root_el.id = root_el.id + '-rendered'
+	}
+      }
+    }
+  }
+  function get_bokeh(root) {
+    if (root.Bokeh === undefined) {
+      return null
+    } else if (root.Bokeh.version !== py_version) {
+      if (root.Bokeh.versions === undefined || !root.Bokeh.versions.has(py_version)) {
+	return null
+      }
+      return root.Bokeh.versions.get(py_version);
+    } else if (root.Bokeh.version === py_version) {
+      return root.Bokeh
+    }
+    return null
+  }
+  function is_loaded(root) {
+    var Bokeh = get_bokeh(root)
+    return (Bokeh != null && Bokeh.Panel !== undefined)
+  }
+  if (is_loaded(root)) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (is_loaded(root)) {
+        clearInterval(timer);
+        embed_document(root);
+      } else if (document.readyState == "complete") {
+        attempts++;
+        if (attempts > 200) {
+          clearInterval(timer);
+	  var Bokeh = get_bokeh(root)
+	  if (Bokeh == null || Bokeh.Panel == null) {
+            console.warn("Panel: ERROR: Unable to run Panel code because Bokeh or Panel library is missing");
+	  } else {
+	    console.warn("Panel: WARNING: Attempting to render but not all required libraries could be resolved.")
+	    embed_document(root)
+	  }
+        }
+      }
+    }, 25, root)
+  }
+})(window);</script></div><div class="output text_html">
+<div class="logo-block">
+<img src='data:image/png;base64,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
+roTBs2RqAAAAAElFTkSuQmCC'
+     style='height:25px; border-radius:12px; display: inline-block; float: left; vertical-align: middle'></img>
+
+
+  <img src='data:image/png;base64,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'
+       style='height:15px; border-radius:12px; display: inline-block; float: left'></img>
+  
+
+
+
+
+</div>
+</div></div>
+</div>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==== Primary parameters. Must be specified.</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="s1">&#39;OttoN&#39;</span>                         <span class="c1"># Must match the refgeo tag</span>
+<span class="n">arcticdem_index</span> <span class="o">=</span> <span class="s1">&#39;../ArcticDEM_Strip_Index_s2s041_3-ACN.gpkg&#39;</span>
+<span class="n">rgi_index</span> <span class="o">=</span> <span class="s1">&#39;../RGI2000-v7.0-G-03_arctic_canada_north.zip&#39;</span>
+<span class="n">do_steps</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">buffer_size</span> <span class="o">=</span> <span class="mi">30</span>   <span class="c1"># To be used in step 2</span>
+<span class="n">working_epsg</span> <span class="o">=</span> <span class="mi">3413</span>
+<span class="n">off_ice_buffer</span> <span class="o">=</span> <span class="mi">250</span>   <span class="c1"># To be used in step 4</span>
+<span class="n">if_additional_exclusion</span> <span class="o">=</span> <span class="kc">True</span>   <span class="c1"># To be used in step 4</span>
+<span class="n">refdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">evmd_threshold</span> <span class="o">=</span> <span class="mi">20</span>    <span class="c1"># To be used in step 9</span>
+<span class="n">min_samples</span> <span class="o">=</span> <span class="mi">3</span>    <span class="c1"># To be used in steps 8, 9, 10</span>
+<span class="n">nproc</span> <span class="o">=</span> <span class="mi">32</span>    <span class="c1"># To be used in step 9</span>
+<span class="n">k_bounds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">150</span><span class="p">]</span>    <span class="c1"># To be used in step 9</span>
+<span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="p">(</span><span class="mi">411</span><span class="p">,</span> <span class="mi">202</span><span class="p">)</span>    <span class="c1"># to be used in step 10</span>
+
+<span class="n">dem_input</span> <span class="o">=</span> <span class="s1">&#39;deminput.csv&#39;</span>
+<span class="n">dem_input_processed</span> <span class="o">=</span> <span class="s1">&#39;deminput_processed.csv&#39;</span>
+<span class="n">dem_summary</span> <span class="o">=</span> <span class="s1">&#39;dem_summary.csv&#39;</span>   <span class="c1"># To be used in step 6</span>
+<span class="n">dem_subsets_folder</span> <span class="o">=</span> <span class="s1">&#39;./DEM_subsets&#39;</span>  <span class="c1"># To be used in step 2  (Must be one-folder deep!)</span>
+<span class="n">dem_processed_folder</span> <span class="o">=</span> <span class="s1">&#39;./DEM_processed&#39;</span>  <span class="c1"># To be used in step 5  (Must be one-folder deep!)</span>
+<span class="n">bitmask_subsets_folder</span> <span class="o">=</span> <span class="s1">&#39;./DEMBitmask_subsets&#39;</span>  <span class="c1"># To be used in step 2  (Must be one-folder deep!)</span>
+<span class="n">altimetry_subsets_folder</span> <span class="o">=</span> <span class="s1">&#39;./Altimetry_subsets&#39;</span>  <span class="c1"># To be used in step 3</span>
+<span class="n">altimetry_processed_folder</span> <span class="o">=</span> <span class="s1">&#39;./Altimetry_processed&#39;</span>  <span class="c1"># To be used in step 4</span>
+<span class="n">selected_elev_file</span> <span class="o">=</span> <span class="s1">&#39;ref_elevs.csv&#39;</span>
+<span class="n">carst_inipath</span> <span class="o">=</span> <span class="s1">&#39;defaults.ini&#39;</span>   <span class="c1"># To be generated and used in step 7</span>
+<span class="n">final_output_tag</span> <span class="o">=</span> <span class="s1">&#39;hydroevent-evmd-bitmask&#39;</span>
+
+
+<span class="c1"># ==== Other parameters. If commented, the defaults will be used </span>
+<span class="c1"># == Step 3</span>
+<span class="c1"># altimetry_acq_time = [&#39;2018-01-01&#39;,&#39;2022-01-01&#39;]</span>
+<span class="c1"># altimetry_acq_cycles = [&#39;03&#39;, &#39;04&#39;, &#39;07&#39;, &#39;08&#39;, &#39;11&#39;, &#39;12&#39;]</span>
+<span class="c1"># altimetry_acq_version = &#39;006&#39;</span>
+<span class="c1"># == Step 9</span>
+<span class="c1"># chunksize = (100, 100)</span>
+
+<span class="c1"># ==== Derived</span>
+<span class="n">refgeo_gpkg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;refgeo-</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s1">.gpkg&#39;</span>
+<span class="n">refgeo_gtif</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;refgeo-</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s1">_15m.tif&#39;</span>
+<span class="n">additional_exclusion_gpkg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">tag</span><span class="si">}</span><span class="s1">-off-ice-exclusion.gpkg&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-acquire-dem-list">
+<h2>Step 1: Acquire DEM list<a class="headerlink" href="#step-1-acquire-dem-list" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 1...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">acquire_dem_list</span><span class="p">(</span><span class="n">arcticdem_index</span><span class="p">,</span> <span class="n">refgeo_gpkg</span><span class="p">,</span> <span class="n">dem_input</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 1 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 1...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-download-subset-dems">
+<h2>Step 2: Download Subset DEMs<a class="headerlink" href="#step-2-download-subset-dems" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 2...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">download_subset_dems</span><span class="p">(</span><span class="n">dem_input</span><span class="p">,</span> <span class="n">dem_subsets_folder</span><span class="p">,</span> <span class="n">bitmask_subsets_folder</span><span class="p">,</span> <span class="n">refgeo_gpkg</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 2 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 2...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-acquire-icesat-2-atl-6-points">
+<h2>Step 3: Acquire ICESat-2 ATL-6 points<a class="headerlink" href="#step-3-acquire-icesat-2-atl-6-points" title="Permalink to this heading">#</a></h2>
+<p>Before running this step, you’ll need to specify the EarthData login credential using environment variables:</p>
+<ul class="simple">
+<li><p>EARTHDATA_USERNAME: username</p></li>
+<li><p>EARTHDATA_PASSWORD: password</p></li>
+</ul>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 3...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">download_is2_atl6_data</span><span class="p">(</span><span class="n">refgeo_gpkg</span><span class="p">,</span> <span class="n">altimetry_subsets_folder</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 3 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 3...
+{&#39;Number of available granules&#39;: 59, &#39;Average size of granules (MB)&#39;: 14.675056974766617, &#39;Total size of all granules (MB)&#39;: 865.8283615112305}
+NSIDC only allows ordering of one granule by name at a time; your orders will be placed accordingly.
+Total number of data order requests is  1  for  10  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460851
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 266765095 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 266765189 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Total number of data order requests is  1  for  8  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460852
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 268775307 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 268775253 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 264256706 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Total number of data order requests is  1  for  10  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460853
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 263386806 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 271640982 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 271700834 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Total number of data order requests is  1  for  11  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460854
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 271772081 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 271772026 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 264340818 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Total number of data order requests is  1  for  10  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460855
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 263950326 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 272419781 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Total number of data order requests is  1  for  10  granules.
+Data request  1  of  1  is submitting to NSIDC
+order ID:  5000005460856
+Initial status of your order request at NSIDC is:  processing
+Your order status is still  processing  at NSIDC. Please continue waiting... this may take a few moments.
+Your order is: complete
+NSIDC returned these messages
+[&#39;Granule 272479851 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 272479816 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;,
+ &#39;Granule 264445300 contained no data within the spatial and/or temporal &#39;
+ &#39;subset constraints to be processed&#39;]
+Beginning download of zipped output...
+Data request 5000005460851 of  6  order(s) is downloaded.
+Beginning download of zipped output...
+Data request 5000005460852 of  6  order(s) is downloaded.
+Beginning download of zipped output...
+Data request 5000005460853 of  6  order(s) is downloaded.
+Beginning download of zipped output...
+Data request 5000005460854 of  6  order(s) is downloaded.
+Beginning download of zipped output...
+Data request 5000005460855 of  6  order(s) is downloaded.
+Beginning download of zipped output...
+Data request 5000005460856 of  6  order(s) is downloaded.
+Download complete
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="step-4-select-icesat-2-atl-6-points-over-good-bedrock">
+<h2>Step 4: Select ICESat-2 ATL-6 points over good bedrock<a class="headerlink" href="#step-4-select-icesat-2-atl-6-points-over-good-bedrock" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">4</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 4...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">filter_is2_atl6_data</span><span class="p">(</span><span class="n">altimetry_subsets_folder</span><span class="p">,</span> <span class="n">altimetry_processed_folder</span><span class="p">,</span> <span class="n">rgi_index</span><span class="p">,</span> <span class="n">refgeo_gpkg</span><span class="p">,</span> 
+                                 <span class="n">working_epsg</span><span class="p">,</span> <span class="n">off_ice_buffer</span><span class="p">,</span> <span class="n">selected_elev_file</span><span class="p">,</span> 
+                                 <span class="n">if_additional_exclusion</span><span class="o">=</span><span class="n">if_additional_exclusion</span><span class="p">,</span>
+                                 <span class="n">additional_exclusion_file</span><span class="o">=</span><span class="n">additional_exclusion_gpkg</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 4 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 4...
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20200503171621_05830704_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20200503171621_05830704_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200503171621_05830704_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200503171621_05830704_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200503171621_05830704_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200503171621_05830704_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190403120935_00800304_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190403120935_00800304_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190403120935_00800304_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190403120935_00800304_006_02_gt2r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20190403120935_00800304_006_02.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20190403120935_00800304_006_02.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20200704142004_01410804_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20200704142004_01410804_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20200704142004_01410804_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20200704142004_01410804_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200704142004_01410804_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200704142004_01410804_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190430003651_04850304_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20200825013147_09270804_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20200825013147_09270804_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20200825013147_09270804_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20200825013147_09270804_006_01.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20200802125608_05830804_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20200802125608_05830804_006_01.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210731193533_05831204_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210731193533_05831204_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210731193533_05831204_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210731193533_05831204_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210327151914_00431104_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190604091310_10250304_006_02_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200530054341_09880704_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200530054341_09880704_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200530054341_09880704_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200530054341_09880704_006_01_gt2r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20200530054341_09880704_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20200530054341_09880704_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190729201629_04850404_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190729201629_04850404_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190729201629_04850404_006_02_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210827080257_09881204_006_01_gt1r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20210827080257_09881204_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20210827080257_09881204_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210425135516_04851104_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210403011938_01411104_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210403011938_01411104_006_02.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20210403011938_01411104_006_02.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20210403011938_01411104_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210403011938_01411104_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210403011938_01411104_006_02_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200831113210_10250804_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190601230427_09880304_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190601230427_09880304_006_02_gt1r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20190601230427_09880304_006_02.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20190601230427_09880304_006_02.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210725093508_04851204_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210725093508_04851204_006_01.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210501235541_05831104_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210501235541_05831104_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210501235541_05831104_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210501235541_05831104_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210501235541_05831104_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210501235541_05831104_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200630142825_00800804_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200630142825_00800804_006_01_gt2l.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20200630142825_00800804_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20200630142825_00800804_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200628041942_00430804_006_01_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20190827185236_09270404_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20190827185236_09270404_006_02.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20190827185236_09270404_006_02.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20190827185236_09270404_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190827185236_09270404_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210330012757_00801104_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210330012757_00801104_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210330012757_00801104_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210330012757_00801104_006_01_gt2r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20210330012757_00801104_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20210330012757_00801104_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200331184834_00800704_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200331184834_00800704_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200331184834_00800704_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200331184834_00800704_006_01_gt2r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20200331184834_00800704_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20200331184834_00800704_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210528122301_09881104_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210528122301_09881104_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210528122301_09881104_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210528122301_09881104_006_01_gt2r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20210528122301_09881104_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20210528122301_09881104_006_01.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20200829012328_09880804_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20200829012328_09880804_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190903045300_10250404_006_02_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200329083952_00430704_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190401020052_00430304_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20190506103713_05830304_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20190506103713_05830304_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190506103713_05830304_006_02_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190506103713_05830304_006_02_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190506103713_05830304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190506103713_05830304_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20200526055201_09270704_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20200526055201_09270704_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20200526055201_09270704_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20200526055201_09270704_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200526055201_09270704_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200526055201_09270704_006_01_gt3r.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20210628210747_00801204_006_01.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20210628210747_00801204_006_01.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20190528231248_09270304_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20190528231248_09270304_006_02.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20190528231248_09270304_006_02.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20190528231248_09270304_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190528231248_09270304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190528231248_09270304_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20190805061654_05830404_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20190805061654_05830404_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210626105904_00431204_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210626105904_00431204_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210626105904_00431204_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210626105904_00431204_006_01_gt2r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20190407120115_01410304_006_02.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20190407120115_01410304_006_02.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20190407120115_01410304_006_02.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20190407120115_01410304_006_02.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190407120115_01410304_006_02_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190407120115_01410304_006_02_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210702205927_01411204_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210702205927_01411204_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20210702205927_01411204_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20210702205927_01411204_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210702205927_01411204_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20200727025546_04850804_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20190831184417_09880404_006_02_gt1l.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20190831184417_09880404_006_02.h5
+skeeping group: /gt3l
+in file: Altimetry_subsets/processed_ATL06_20190831184417_09880404_006_02.h5
+skeeping group: /gt3r
+in file: Altimetry_subsets/processed_ATL06_20190831184417_09880404_006_02.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210823081115_09271204_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210823081115_09271204_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20210823081115_09271204_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20210823081115_09271204_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210823081115_09271204_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210823081115_09271204_006_01_gt3r.h5
+skeeping group: /gt1l
+in file: Altimetry_subsets/processed_ATL06_20210524123121_09271104_006_01.h5
+skeeping group: /gt1r
+in file: Altimetry_subsets/processed_ATL06_20210524123121_09271104_006_01.h5
+skeeping group: /gt2l
+in file: Altimetry_subsets/processed_ATL06_20210524123121_09271104_006_01.h5
+skeeping group: /gt2r
+in file: Altimetry_subsets/processed_ATL06_20210524123121_09271104_006_01.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210524123121_09271104_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210524123121_09271104_006_01_gt3r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt1l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt1r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt2l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt2r.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt3l.h5
+out -&gt; Altimetry_processed/processed_ATL06_20210530223144_10251104_006_01_gt3r.h5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-align-every-dems-with-icesat-2-reference-points-and-calcuate-uncertainty">
+<h2>Step 5: Align every DEMs with ICESat-2 reference points, and calcuate uncertainty<a class="headerlink" href="#step-5-align-every-dems-with-icesat-2-reference-points-and-calcuate-uncertainty" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 5...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">align_dems</span><span class="p">(</span><span class="n">refgeo_gpkg</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">,</span> <span class="n">selected_elev_file</span><span class="p">,</span> 
+                       <span class="n">dem_subsets_folder</span><span class="p">,</span> <span class="n">dem_processed_folder</span><span class="p">,</span> <span class="n">bitmask_subsets_folder</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 5 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-analyze-the-processed-dems-and-make-manifest">
+<h2>Step 6: Analyze the processed DEMs and make manifest<a class="headerlink" href="#step-6-analyze-the-processed-dems-and-make-manifest" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">6</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 6...&#39;</span><span class="p">)</span>
+    <span class="n">achydro</span><span class="o">.</span><span class="n">make_dem_manifest</span><span class="p">(</span><span class="n">dem_summary</span><span class="p">,</span> <span class="n">dem_processed_folder</span><span class="p">,</span> <span class="n">dem_input_processed</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 6 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 6...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-stack-all-dems">
+<h2>Step 7: Stack all DEMs<a class="headerlink" href="#step-7-stack-all-dems" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">7</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 7...&#39;</span><span class="p">)</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="n">achydro</span><span class="o">.</span><span class="n">stack_dems</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">refgeo_gtif</span><span class="p">,</span> <span class="n">carst_inipath</span><span class="p">,</span> <span class="n">dem_input_processed</span><span class="p">,</span> <span class="n">refdate</span><span class="p">,</span> <span class="n">evmd_threshold</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 7 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 7...
+0...10...20...30...40...50...60...70...80...90...100 - done.
+total number of pixels to be processed: 300000
+Program Start: 2024-04-04 11:08:29
+1) asp-processed-SETSM_s2s041_W1W1_20080818_102001000360F100_10200100041FDD00_2m_lsf_seg2_dem.tif
+2) asp-processed-SETSM_s2s041_WV01_20120404_102001001B39A200_102001001A68D800_2m_lsf_seg1_dem.tif
+3) asp-processed-SETSM_s2s041_WV01_20120410_1020010019898200_1020010019E83C00_2m_lsf_seg1_dem.tif
+4) asp-processed-SETSM_s2s041_WV01_20130404_1020010022A7C300_1020010020237E00_2m_lsf_seg1_dem.tif
+5) asp-processed-SETSM_s2s041_WV02_20130413_10300100204E3500_1030010020292500_2m_lsf_seg1_dem.tif
+6) asp-processed-SETSM_s2s041_WV01_20130702_1020010022EB1D00_1020010022D32700_2m_lsf_seg1_dem.tif
+7) asp-processed-SETSM_s2s041_WV01_20130825_102001002417EA00_102001002553BE00_2m_lsf_seg1_dem.tif
+8) asp-processed-SETSM_s2s041_W1W2_20140410_102001002C0E9000_10300100300E6700_2m_lsf_seg2_dem.tif
+9) asp-processed-SETSM_s2s041_W1W2_20140410_102001002C0E9000_103001002F459900_2m_lsf_seg1_dem.tif
+10) asp-processed-SETSM_s2s041_W1W2_20140410_102001002C0E9000_103001002F58B500_2m_lsf_seg1_dem.tif
+11) asp-processed-SETSM_s2s041_W1W2_20140410_102001002C0E9000_103001002F088800_2m_lsf_seg2_dem.tif
+12) asp-processed-SETSM_s2s041_WV01_20140425_102001002ACF1F00_102001002E945800_2m_lsf_seg1_dem.tif
+13) asp-processed-SETSM_s2s041_WV02_20150322_103001003FBA9B00_10300100404FF800_2m_lsf_seg1_dem.tif
+14) asp-processed-SETSM_s2s041_WV02_20150328_103001003E6A4800_1030010040937F00_2m_lsf_seg1_dem.tif
+15) asp-processed-SETSM_s2s041_WV03_20150329_1040010009B89200_10400100096E9600_2m_lsf_seg1_dem.tif
+16) asp-processed-SETSM_s2s041_WV01_20150330_102001003CBD2100_102001003C55D600_2m_lsf_seg1_dem.tif
+17) asp-processed-SETSM_s2s041_WV01_20150401_102001003AAE2A00_102001003D3E9700_2m_lsf_seg1_dem.tif
+18) asp-processed-SETSM_s2s041_WV02_20150402_1030010040AB4B00_103001003F85C900_2m_lsf_seg1_dem.tif
+19) asp-processed-SETSM_s2s041_WV02_20150403_1030010040AEC700_103001004093EC00_2m_lsf_seg2_dem.tif
+20) asp-processed-SETSM_s2s041_WV02_20150405_103001004076F900_103001003F3C8100_2m_lsf_seg1_dem.tif
+21) asp-processed-SETSM_s2s041_WV03_20150406_104001000A6C0300_10400100095BB600_2m_lsf_seg1_dem.tif
+22) asp-processed-SETSM_s2s041_WV02_20150408_103001004005B100_10300100401B3700_2m_lsf_seg1_dem.tif
+23) asp-processed-SETSM_s2s041_W2W3_20150409_10300100413D9900_104001000BBE8100_2m_lsf_seg3_dem.tif
+24) asp-processed-SETSM_s2s041_WV02_20150409_1030010040C1A300_1030010041CEC100_2m_lsf_seg1_dem.tif
+25) asp-processed-SETSM_s2s041_W1W2_20150409_102001003B0C6200_10300100413D9900_2m_lsf_seg1_dem.tif
+26) asp-processed-SETSM_s2s041_WV02_20150410_103001003F012A00_103001003FC2BE00_2m_lsf_seg1_dem.tif
+27) asp-processed-SETSM_s2s041_W1W2_20150604_102001003F243600_1030010043D68B00_2m_lsf_seg3_dem.tif
+28) asp-processed-SETSM_s2s041_W1W2_20150604_102001003F243600_1030010043D68B00_2m_lsf_seg4_dem.tif
+29) asp-processed-SETSM_s2s041_W1W2_20150611_102001003D4C2600_1030010043D68B00_2m_lsf_seg3_dem.tif
+30) asp-processed-SETSM_s2s041_W2W3_20150611_1030010043D68B00_104001000D232400_2m_lsf_seg5_dem.tif
+31) asp-processed-SETSM_s2s041_W2W3_20150611_1030010043D68B00_104001000D232400_2m_lsf_seg6_dem.tif
+32) asp-processed-SETSM_s2s041_W1W3_20150614_102001003D4C2600_104001000D232400_2m_lsf_seg5_dem.tif
+33) asp-processed-SETSM_s2s041_W2W2_20160401_1030010052C44B00_10300100530CEA00_2m_lsf_seg2_dem.tif
+34) asp-processed-SETSM_s2s041_WV01_20160403_102001004E228600_102001004D4B5200_2m_lsf_seg1_dem.tif
+35) asp-processed-SETSM_s2s041_WV01_20160405_102001004EAC1100_102001004E29B200_2m_lsf_seg1_dem.tif
+36) asp-processed-SETSM_s2s041_WV02_20160406_103001005312B600_10300100540E6100_2m_lsf_seg1_dem.tif
+37) asp-processed-SETSM_s2s041_WV02_20170405_10300100677C5200_103001006654CF00_2m_lsf_seg1_dem.tif
+38) asp-processed-SETSM_s2s041_WV01_20170410_1020010061A55000_102001006016B900_2m_lsf_seg1_dem.tif
+39) asp-processed-SETSM_s2s041_WV02_20180409_103001007B487300_103001007D4A1000_2m_lsf_seg1_dem.tif
+40) asp-processed-SETSM_s2s041_WV01_20180409_1020010072C88A00_102001006FD7D900_2m_lsf_seg1_dem.tif
+41) asp-processed-SETSM_s2s041_WV02_20180910_1030010084801600_10300100856D2A00_2m_lsf_seg1_dem.tif
+42) asp-processed-SETSM_s2s041_WV02_20180910_1030010084052600_1030010083167E00_2m_lsf_seg1_dem.tif
+43) asp-processed-SETSM_s2s041_WV02_20180911_1030010085252A00_1030010085A32800_2m_lsf_seg1_dem.tif
+44) asp-processed-SETSM_s2s041_WV01_20190416_1020010084312300_10200100876E3800_2m_lsf_seg1_dem.tif
+45) asp-processed-SETSM_s2s041_WV01_20190416_1020010086E6C800_1020010084B25300_2m_lsf_seg1_dem.tif
+46) asp-processed-SETSM_s2s041_WV02_20200324_10300100A4AC4200_10300100A4598400_2m_lsf_seg1_dem.tif
+47) asp-processed-SETSM_s2s041_WV03_20200407_104001005A0AF500_10400100589B4500_2m_lsf_seg1_dem.tif
+48) asp-processed-SETSM_s2s041_WV01_20200416_1020010097A0A800_1020010099CB7300_2m_lsf_seg1_dem.tif
+49) asp-processed-SETSM_s2s041_WV01_20200713_1020010096357500_102001009B177A00_2m_lsf_seg1_dem.tif
+50) asp-processed-SETSM_s2s041_WV02_20200719_10300100A941BC00_10300100A9AB3F00_2m_lsf_seg2_dem.tif
+51) asp-processed-SETSM_s2s041_WV02_20200724_10300100AA34CD00_10300100AAB36300_2m_lsf_seg1_dem.tif
+52) asp-processed-SETSM_s2s041_WV01_20210420_10200100AFA27100_10200100AFD4D600_2m_lsf_seg1_dem.tif
+53) asp-processed-SETSM_s2s041_WV01_20210422_10200100AF61FB00_10200100AF6B1100_2m_lsf_seg1_dem.tif
+54) asp-processed-SETSM_s2s041_WV01_20210423_10200100B0444700_10200100B0C1E000_2m_lsf_seg1_dem.tif
+55) asp-processed-SETSM_s2s041_WV02_20210825_10300100C4689200_10300100C481A400_2m_lsf_seg3_dem.tif
+Program End: 2024-04-04 11:09:37
+Time taken: 0:01:08.545991
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-8-visualization-of-the-stacked-elevations">
+<h2>Step 8: Visualization of the stacked elevations<a class="headerlink" href="#step-8-visualization-of-the-stacked-elevations" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">8</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 8...&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;pile&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="n">pile</span> <span class="o">=</span> <span class="n">DemPile</span><span class="p">()</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="n">carst_inipath</span><span class="p">)</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">load_pickle</span><span class="p">()</span>
+    <span class="n">pile</span><span class="o">.</span><span class="n">viz</span><span class="p">(</span><span class="n">evmd_threshold</span><span class="o">=</span><span class="n">evmd_threshold</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="n">min_samples</span><span class="p">,</span> <span class="n">reg_method</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">,</span> 
+             <span class="n">use_bitmask_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_evmd_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 8 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 8...
+OttoN_15m_dhdt.tif not found; using topography as a basemap.
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c6b9901e4b574097a0387b2f691063bd", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+<section id="step-9-fit-a-dh-dt-model-determine-maximum-elevation-change-and-timing">
+<h2>Step 9: Fit a dh/dt model, determine maximum elevation change and timing<a class="headerlink" href="#step-9-fit-a-dh-dt-model-determine-maximum-elevation-change-and-timing" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">9</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 9...&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;pile&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="n">pile</span> <span class="o">=</span> <span class="n">DemPile</span><span class="p">()</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="n">carst_inipath</span><span class="p">)</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">load_pickle</span><span class="p">()</span>
+    <span class="n">drain_dh_map</span><span class="p">,</span> <span class="n">drain_t_map</span> <span class="o">=</span> <span class="n">achydro</span><span class="o">.</span><span class="n">dhdt_fit_sigmoid</span><span class="p">(</span><span class="n">pile</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">final_output_tag</span><span class="p">,</span> 
+                                                         <span class="n">nproc</span><span class="o">=</span><span class="n">nproc</span><span class="p">,</span> <span class="n">evmd_threshold</span><span class="o">=</span><span class="n">evmd_threshold</span><span class="p">,</span> <span class="n">k_bounds</span><span class="o">=</span><span class="n">k_bounds</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 9 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 9...
+0/600 lines processed
+100/600 lines processed
+200/600 lines processed
+300/600 lines processed
+400/600 lines processed
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-10-result-visualization">
+<h2>Step 10: Result visualization<a class="headerlink" href="#step-10-result-visualization" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">carst.libdhdt</span> <span class="kn">import</span> <span class="n">sigmoid_reg</span> <span class="k">as</span> <span class="n">smr</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">rasterio</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">tkr</span> 
+<span class="kn">from</span> <span class="nn">cmcrameri</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="k">def</span> <span class="nf">m2km_fmt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span> <span class="c1"># custom formatter function</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="k">if</span> <span class="mi">10</span> <span class="ow">in</span> <span class="n">do_steps</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Doing Step 10...&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;pile&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="n">pile</span> <span class="o">=</span> <span class="n">DemPile</span><span class="p">()</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="n">carst_inipath</span><span class="p">)</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">load_pickle</span><span class="p">()</span>
+
+    <span class="c1"># You have to at least run step 7 once to get the following file</span>
+    <span class="n">quick_topography_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">pile</span><span class="o">.</span><span class="n">dhdtprefix</span><span class="si">}</span><span class="s1">_median_topo.tif&#39;</span>
+    <span class="n">toporaster</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">quick_topography_path</span><span class="p">)</span>
+    <span class="n">topo</span> <span class="o">=</span> <span class="n">toporaster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">toporaster</span><span class="o">.</span><span class="n">bounds</span>
+    <span class="c1"># img_extent = (left / 1000, right / 1000, bottom / 1000, top / 1000)</span>
+    <span class="n">img_extent</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">)</span>
+
+    <span class="c1"># You have to at least run step 9 once to the following file</span>
+    <span class="n">water_dh_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">pile</span><span class="o">.</span><span class="n">dhdtprefix</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">final_output_tag</span><span class="si">}</span><span class="s1">_dh.tif&#39;</span>
+    <span class="n">water_dhraster</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">water_dh_path</span><span class="p">)</span>
+    <span class="n">water_dh</span> <span class="o">=</span> <span class="n">water_dhraster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s1">&#39;gdf_rgi&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="n">gdf_rgi</span> <span class="o">=</span> <span class="n">achydro</span><span class="o">.</span><span class="n">read_zipped_shapefile</span><span class="p">(</span><span class="n">rgi_index</span><span class="p">,</span> <span class="n">working_epsg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;ref_h&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="n">ref_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">selected_elev_file</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+    <span class="n">exitstate</span><span class="p">,</span> <span class="n">evmd_lbl</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">ts</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">do_evmd</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="n">evmd_threshold</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="n">min_samples</span><span class="p">)</span>
+    <span class="n">bitmask_lbl</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">ts</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">bitmask_labels</span>
+    <span class="n">good_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">bitmask_lbl</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">evmd_lbl</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">ts</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">get_date</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">get_value</span><span class="p">()</span>
+    <span class="n">ye</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">get_uncertainty</span><span class="p">()</span>
+    <span class="n">x_date</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pile</span><span class="o">.</span><span class="n">refdate</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+
+    <span class="n">sampleloc_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">col</span> <span class="o">/</span> <span class="n">pile</span><span class="o">.</span><span class="n">ts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">left</span>
+    <span class="n">sampleloc_y</span> <span class="o">=</span> <span class="n">top</span> <span class="o">-</span> <span class="p">(</span><span class="n">row</span> <span class="o">/</span> <span class="n">pile</span><span class="o">.</span><span class="n">ts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">top</span> <span class="o">-</span> <span class="n">bottom</span><span class="p">)</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_gridspec</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="n">axbottom</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:])</span>
+    
+    <span class="n">h_im</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">topo</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">img_extent</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_earth&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ref_h</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">ref_h</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;xkcd:salmon&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;xkcd:black&#39;</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">dh_im</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">water_dh</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">img_extent</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">lapaz</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]:</span>
+        <span class="n">gdf_rgi</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;xkcd:black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sampleloc_x</span><span class="p">,</span> <span class="n">sampleloc_y</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;xkcd:black&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;xkcd:violet&#39;</span><span class="p">)</span>
+
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+    <span class="n">tick_fmt</span> <span class="o">=</span> <span class="n">tkr</span><span class="o">.</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="n">m2km_fmt</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">tick_fmt</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">tick_fmt</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">tick_fmt</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;EPSG:3413 coordinates (km)&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;EPSG:3413 coordinates (km)&#39;</span><span class="p">)</span>
+    
+    <span class="n">cbar1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">h_im</span><span class="p">)</span>
+    <span class="n">cbar2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">dh_im</span><span class="p">)</span>
+    <span class="n">cbar1</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Surface elevation (m)&#39;</span><span class="p">)</span>
+    <span class="n">cbar2</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Elevation change of the selected event (m)&#39;</span><span class="p">)</span>
+
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x_date</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">ye</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;k.&#39;</span><span class="p">)</span>
+    <span class="c1"># np.set_printoptions(precision=3)</span>
+    <span class="c1"># np.set_printoptions(suppress=True)</span>
+
+    <span class="n">x_good</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">good_idx</span><span class="p">]</span>
+    <span class="n">y_good</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">good_idx</span><span class="p">]</span>
+    <span class="n">ye_good</span> <span class="o">=</span> <span class="n">ye</span><span class="p">[</span><span class="n">good_idx</span><span class="p">]</span>
+                
+    <span class="n">x_pred</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">sigmoid_height</span><span class="p">,</span> <span class="n">sigmoid_height_stderr</span><span class="p">,</span> <span class="n">sigmoid_timing</span><span class="p">,</span> <span class="n">exitstate</span> <span class="o">=</span> <span class="n">smr</span><span class="p">(</span><span class="n">x_good</span><span class="p">,</span> <span class="n">y_good</span><span class="p">,</span> <span class="n">ye</span><span class="o">=</span><span class="n">ye_good</span><span class="p">,</span> <span class="n">k_bounds</span><span class="o">=</span><span class="n">k_bounds</span><span class="p">)</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sigmoid height (2-sigma) = </span><span class="si">{</span><span class="n">sigmoid_height</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">±</span><span class="si">{</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmoid_height_stderr</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> m&#39;</span> <span class="p">)</span>
+    <span class="n">x_pred_date</span> <span class="o">=</span> <span class="p">[</span><span class="n">pile</span><span class="o">.</span><span class="n">refdate</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_pred</span><span class="p">]</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pred_date</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">x_good_date</span> <span class="o">=</span> <span class="p">[</span><span class="n">pile</span><span class="o">.</span><span class="n">refdate</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_good</span><span class="p">]</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_good_date</span><span class="p">,</span> <span class="n">y_good</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">sigmoid_timing</span><span class="p">):</span>
+        <span class="n">axbottom</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">refdate</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">sigmoid_timing</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;xkcd:teal&#39;</span><span class="p">)</span>
+
+
+    <span class="n">bitmask_colorcodes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xkcd:lilac&#39;</span><span class="p">,</span> <span class="s1">&#39;xkcd:gray&#39;</span><span class="p">,</span> <span class="s1">&#39;xkcd:light blue&#39;</span><span class="p">,</span>  <span class="s1">&#39;xkcd:blue&#39;</span><span class="p">,</span> 
+                          <span class="s1">&#39;xkcd:light yellow&#39;</span><span class="p">,</span>  <span class="s1">&#39;xkcd:yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;xkcd:gold&#39;</span><span class="p">,</span> <span class="s1">&#39;xkcd:brown&#39;</span><span class="p">]</span>
+    <span class="n">bitmask_comments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Edge&#39;</span><span class="p">,</span> <span class="s1">&#39;Water&#39;</span><span class="p">,</span> <span class="s1">&#39;Water+Edge&#39;</span><span class="p">,</span>              
+                        <span class="s1">&#39;Cloud&#39;</span><span class="p">,</span> <span class="s1">&#39;Cloud+Edge&#39;</span><span class="p">,</span> <span class="s1">&#39;Cloud+Water&#39;</span><span class="p">,</span> <span class="s1">&#39;Cloud+Edge+Water&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">selected_bit</span><span class="p">,</span> <span class="n">colorcode</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="n">bitmask_colorcodes</span><span class="p">):</span>
+        <span class="n">selected_group_index</span> <span class="o">=</span> <span class="n">bitmask_lbl</span> <span class="o">==</span> <span class="n">selected_bit</span>
+        <span class="n">axbottom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_date</span><span class="p">[</span><span class="n">selected_group_index</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">selected_group_index</span><span class="p">],</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colorcode</span><span class="p">,</span> 
+                    <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="n">selected_bit</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+
+
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">YearLocator</span><span class="p">())</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">axbottom</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span> <span class="n">rotation</span><span class="o">=-</span><span class="mi">30</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;xkcd:light grey&#39;</span><span class="p">)</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;pixel location = [</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+    <span class="n">axbottom</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;height (m)&#39;</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;xkcd:white&#39;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">pile</span><span class="o">.</span><span class="n">dhdtprefix</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">final_output_tag</span><span class="si">}</span><span class="s1">_viz.png&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Step 10 skipped&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doing Step 10...
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d33e2f78786641488c86bf35631f30bf", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="frequency_vs_massbalance.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Figure 5 script</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../sup-data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Supplemental data README</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-acquire-dem-list">Step 1: Acquire DEM list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-subset-dems">Step 2: Download Subset DEMs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-acquire-icesat-2-atl-6-points">Step 3: Acquire ICESat-2 ATL-6 points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-select-icesat-2-atl-6-points-over-good-bedrock">Step 4: Select ICESat-2 ATL-6 points over good bedrock</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-align-every-dems-with-icesat-2-reference-points-and-calcuate-uncertainty">Step 5: Align every DEMs with ICESat-2 reference points, and calcuate uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-analyze-the-processed-dems-and-make-manifest">Step 6: Analyze the processed DEMs and make manifest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-stack-all-dems">Step 7: Stack all DEMs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-visualization-of-the-stacked-elevations">Step 8: Visualization of the stacked elevations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-fit-a-dh-dt-model-determine-maximum-elevation-change-and-timing">Step 9: Fit a dh/dt model, determine maximum elevation change and timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-result-visualization">Step 10: Result visualization</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Whyjay Zheng et al.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
