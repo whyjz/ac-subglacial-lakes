@@ -1,4 +1,4 @@
-# Supplementary information for "Widespread and rapid dynamics of subglacial and proglacial-subglacial water in the Canadian Arctic"
+# Supplementary information for "Widespread and rapid dynamics of subglacial water in the Canadian Arctic"
 
 Whyjay Zheng [1]*, Wesley Van Wychen [2] and Tian Li [3]
 
