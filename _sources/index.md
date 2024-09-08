@@ -1,4 +1,4 @@
-# Subglacial and proglacial-subglacial water in the Canadian Arctic
+# Subglacial water in the Canadian Arctic
 
 Whyjay Zheng [1]*, Wesley Van Wychen [2] and Tian Li [3]
 
