@@ -21,7 +21,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v3
       with:
         python-version: 3.10
-        mamba-version: "*"
+        # mamba-version: "*"
         channels: conda-forge
         activate-environment: achydro
         environment-file: environment.yml
