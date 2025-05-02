@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python 3.10 and conda/mamba
       uses: conda-incubator/setup-miniconda@v3
       with:
-        python-version: 3.10
+        python-version: "3.10"
         # mamba-version: "*"
         channels: conda-forge
         activate-environment: achydro
