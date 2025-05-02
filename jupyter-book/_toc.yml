@@ -1,18 +1,21 @@
 format: jb-book
 root: index.md
 parts:
-- caption: Supplementary information
-  numbered: false
-  chapters:
-  - file: supplement.md
+# - caption: Supplementary information
+#   numbered: false
+#   chapters:
+#   - file: supplement.md
 
 - caption: Figure scripts
   numbered: false
   chapters:
-  - file: notebooks/main_visual.ipynb
-  - file: notebooks/temporal_patterns.ipynb
-  - file: notebooks/frequency_vs_massbalance.ipynb
-  - file: notebooks/analysis_OttoN.ipynb
+  - file: notebooks/main_visual-sciadv.ipynb
+  - file: notebooks/temporal_patterns-v2.ipynb
+  - file: notebooks/frequency_vs_massbalance-v2.ipynb
+  - file: notebooks/plot_single_lake_wlr.ipynb
+  - file: notebooks/plot_single_lake_smr.ipynb
+  - file: notebooks/plot_single_lake_smr-dwn-first.ipynb
+  - file: notebooks/plot_single_lake_gpr.ipynb
 
 - caption: Supplementary data set
   numbered: false
